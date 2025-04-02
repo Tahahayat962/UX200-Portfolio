@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <header class="fade-in-up">
+        <div class="container">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item"><a href="#portfolio">My Works</a></li>
+                    <li class="nav-item"><a href="#skills">Skills</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                    <li class="nav-item"><a href="resume/resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero fade-in-up">
+        <div class="container">
+            <h1>Hi, I'm <span class="name">Taha Hayat</span></h1>
+            <p class="tagline">UX Designer</p>
+            <a href="#portfolio" class="btn fade-in-up">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about fade-in-up">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text fade-in-up">
+                    <p>I'm a UX Designer, I enjoy identifying and fixing design problems. I am passionate about 
+                        fixing bad design because personally, I really dislike poor designs.
+                    </p>
+                    <p>Aside from UX design, My hobbies are playing the guitar or gaming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio fade-in-up">
+        <div class="container">
+            <h2>My Works</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in-up">
+                    <img src="images/project1_thumbnail.png" alt="Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Remembering Bernice</h3>
+                        <p>A movie poster I made for my graphic design class.</p>
+                        <a href="portfolio/project1.html" class="btn fade-in-up">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in-up">
+                    <img src="images/project2_thumbnail.png" alt="Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Dracula book cover</h3>
+                        <p>A book cover I made for Bram Stoker's <i>Dracula</i>.</p>
+                        <a href="portfolio/project2.html" class="btn fade-in-up">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in-up">
+                    <img src="images/project3_thumbnail.png" alt="Project 3">
+                    <div class="portfolio-overlay">
+                        <h3>Food bank brochure</h3>
+                        <p>A brochure I made for a class project.</p>
+                        <a href="portfolio/project3.html" class="btn fade-in-up">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in-up">
+                    <img src="images/project4_thumbnail.png" alt="Project 4">
+                    <div class="portfolio-overlay">
+                        <h3>BScene website</h3>
+                        <p>A website redesign for a client.</p>
+                        <a href="portfolio/project4.html" class="btn fade-in-up">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills fade-in-up">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category fade-in-up">
+                    <h3 class="skill-category">Frontend</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>JavaScript</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in-up">
+                    <h3 class="skill-category">Tools</h3>
+                    <ul>
+                        <li>Github</li>
+                        <li>Figma</li>
+                        <li>Adobe Illustrator, InDesign, Photoshop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact fade-in-up">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in-up">
+                    <p><i class="fas fa-envelope"></i> haya2002@mylaurier.ca</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Tahahayat962"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form fade-in-up">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn fade-in-up">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fade-in-up">
+        <div class="container">
+            <p>&copy; 2025 Taha Hayat's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate headings
+            const headings = document.querySelectorAll('h1, h2, h3, h4');
+            
+            const animateElements = () => {
+                const triggerPoint = window.innerHeight * 0.85;
+                
+                headings.forEach((heading, index) => {
+                    const headingPosition = heading.getBoundingClientRect().top;
+                    
+                    if (headingPosition < triggerPoint) {
+                        heading.style.transitionDelay = `${index * 0.15}s`;
+                        heading.classList.add('animate');
+                    }
+                });
+                
+                document.querySelectorAll('.fade-in-up').forEach(el => {
+                    if (el.getBoundingClientRect().top < triggerPoint) {
+                        el.classList.add('show');
+                    }
+                });
+            };
+        
+            // Run once on load
+            animateElements();
+            
+            // Run on scroll
+            window.addEventListener('scroll', animateElements);
+        });
+        </script>
+</body>
+<script src="script.js"></script>
+</html>
