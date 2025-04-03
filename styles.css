@@ -592,6 +592,7 @@ a, button, input, textarea {
 
 .project-meta {
     display: flex;
+    justify-content: flex-start;
     gap: 3rem;
     margin: 2.5rem 0;
     flex-wrap: wrap;
@@ -599,6 +600,50 @@ a, button, input, textarea {
 
 .meta-group {
     min-width: 150px;
+}
+
+/* Adjust margin-left for TECH to align with CLIENTS */
+.project-meta .meta-group:nth-child(2) {
+    margin-left: 260px; 
+
+}
+
+.meta-label {
+    font-family: 'Impact', sans-serif;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.case-study img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 2.5rem 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border: 1px solid var(--gray-2);
+}
+
+.case-study section {
+    margin: 4rem 0;
+}
+
+
+@media (max-width: 768px) {
+    .project-meta {
+        gap: 1.5rem;
+    }
+    
+    
+    .project-meta .meta-group:nth-child(2) {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .meta-group {
+        min-width: 120px;
+    }
 }
 
 .meta-label {
@@ -750,4 +795,49 @@ a, button, input, textarea {
     outline: none;
     border:none;
     box-shadow: none;
+}
+
+/* Wrapper for potentially multiple embeds */
+.prototype-embeds-wrapper {
+    margin-top: 2rem; /* Space above the whole embed section */
+    margin-bottom: 2rem; /* Space below the whole embed section */
+}
+
+/* Styling for each individual prototype container */
+.prototype-iframe-container {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 2.5rem; 
+}
+
+.prototype-iframe-container iframe {
+    display: block;
+    width: 100%;
+    border: none !important; 
+}
+
+/* Add small space below the heading inside the container */
+.prototype-iframe-container h4 {
+     margin-bottom: 1rem; /* Adjusted spacing */
+     padding-top: 1rem; /* Add some space above heading inside container */
+}
+
+/* Styling for the clarification notes below iframes */
+.prototype-iframe-container p {
+    padding: 0 1rem 1rem; /* Add padding to the bottom note */
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #666; /* Muted text color */
+}
+
+
+/* Remove bottom margin from the very last container in the wrapper */
+.prototype-embeds-wrapper .prototype-iframe-container:last-child {
+    margin-bottom: 0;
 }
